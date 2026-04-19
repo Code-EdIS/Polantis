@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Polantis | Tech Universe</title>
+  <link rel="icon" href="./assets/Polantis.png">
+  <link rel="apple-touch-icon" href="./assets/Polantis.png">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
@@ -19,11 +21,9 @@
 
 <!-- NAV -->
 <header id="nav" class="fixed top-0 w-full z-50 backdrop-blur-md bg-[#050814cc] border-b border-blue-900/30 transition-all">
-  <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-2">
 
-    <h1 class="text-xl tracking-[0.3em] font-bold text-blue-300 glow">
-      POLANTIS
-    </h1>
+    <img src="./assets/Polantis.png" alt="logo" class="h-20 md:h-32 w-auto object-contain"> 
 
     <div class="flex items-center gap-4">
       <button onclick="setLang('en')" class="nav-btn">EN</button>
@@ -38,38 +38,133 @@
   <div class="bg-grid"></div>
   <div class="scan-overlay"></div>
 
-  <div class="z-10">
-    <h2 class="text-5xl md:text-7xl font-bold glitch glow mb-6">
+  <div class="z-10 flex flex-col items-center gap-8">
+    
+    <h2 class="text-5xl md:text-7xl font-bold glitch glow">
       <span data-i18n="hero_title">Tech Beyond Limits</span>
     </h2>
 
-    <p class="text-blue-200 max-w-xl mx-auto opacity-80">
-      <span data-i18n="hero_subtitle"></span>
+    <p class="text-blue-200 max-w-xl opacity-80">
+      <span data-i18n="hero_subtitle">
+        Electronics redefined. Components, mobile tech and futuristic gadgets.
+      </span>
     </p>
+
+    <!-- CTA -->
+    <a href="#primaSezione" class="cta-btn" data-i18n="hero_cta">
+      > ENTER SYSTEM
+    </a>
+
   </div>
 </section>
 
 <!-- SECTIONS -->
-<section class="section reveal">
-  <h2 class="section-title" data-i18n="sec1_title"></h2>
-  <p class="section-text" data-i18n="sec1_text"></p>
-  <div class="hud-box"></div>
+<section id="primaSezione" class="section reveal">
+
+  <h2 class="section-title" data-i18n="sec1_title">PC Components</h2>
+
+  <p class="section-text" data-i18n="sec1_text">
+    Discover high-performance PC components designed for power, speed, and reliability. From advanced motherboards and cutting-edge GPUs to ultra-fast RAM and precision cooling systems, everything you need to build or upgrade your perfect machine is here.
+  </p>
+
+  <div class="hud-box p-6">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+      <!-- IMAGE 1 -->
+      <div class="img-card">
+        <img src="./assets/computer.png" alt="computer">
+        <div class="scan"></div>
+      </div>
+
+      <!-- IMAGE 2 -->
+      <div class="img-card">
+        <img src="./assets/schedaVideo.png" alt="schedaVideo">
+        <div class="scan"></div>
+      </div>
+
+      <!-- IMAGE 3 -->
+      <div class="img-card">
+        <img src="./assets/ram.png" alt="ram">
+        <div class="scan"></div>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 <section class="section reveal">
-  <h2 class="section-title" data-i18n="sec2_title"></h2>
-  <p class="section-text" data-i18n="sec2_text"></p>
-  <div class="hud-box"></div>
+  <h2 class="section-title" data-i18n="sec2_title">Mobile Universe</h2>
+  <p class="section-text" data-i18n="sec2_text">Step into the world of mobile technology with the latest smartphones, wireless audio devices, fast chargers, and smart accessories. Designed to keep you connected, productive, and entertained wherever you go.</p>
+  <div class="hud-box p-6">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+      <!-- IMAGE 1 -->
+      <div class="img-card">
+        <img src="./assets/smartphone.png" alt="smartphone">
+        <div class="scan"></div>
+      </div>
+
+      <!-- IMAGE 2 -->
+      <div class="img-card">
+        <img src="./assets/Airpods.png" alt="Airpods">
+        <div class="scan"></div>
+      </div>
+
+      <!-- IMAGE 3 -->
+      <div class="img-card">
+        <img src="./assets/wirelssCharger.png" alt="wirelessCharger">
+        <div class="scan"></div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 <section class="section reveal">
-  <h2 class="section-title" data-i18n="sec3_title"></h2>
-  <p class="section-text" data-i18n="sec3_text"></p>
-  <div class="hud-box"></div>
+  <h2 class="section-title" data-i18n="sec3_title">Smart Gadgets</h2>
+  <p class="section-text" data-i18n="sec3_text">Explore a curated selection of smart gadgets and compact electronic devices that enhance your everyday life. From innovative home accessories to practical small appliances, technology becomes part of your routine.</p>
+  <div class="hud-box p-6">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+      <!-- IMAGE 1 -->
+      <div class="img-card">
+        <img src="./assets/aspirapolvere.png" alt="aspirapolvere">
+        <div class="scan"></div>
+      </div>
+
+      <!-- IMAGE 2 -->
+      <div class="img-card">
+        <img src="./assets/phone.png" alt="phone">
+        <div class="scan"></div>
+      </div>
+
+      <!-- IMAGE 3 -->
+      <div class="img-card">
+        <img src="./assets/smartwatch.png" alt="smartwatch">
+        <div class="scan"></div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
-<footer class="text-center py-10 border-t border-blue-900/30 text-blue-300 text-sm">
+<footer class="text-center py-10 border-t border-blue-900/30 text-blue-300 text-sm overflow-hidden">
   POLANTIS © 2026
+  <div class="flex flex-row items-center justify-between">
+    <span>
+    <p data-i18n="footer_address">Address: ul. Piastowska 38, Bronisze 05-850</p>
+    <p data-i18n="footer_vat">VAT number: 5273183522</p>
+    </span>
+    <img src="./assets/Polantis.png" alt="logo" class="h-32 w-auto object-contain">
+    <p data-i18n="footer_email">Contact us at:info@polantisspzoo.com</p>
+  </div>
 </footer>
 
 <script src="script.js"></script>

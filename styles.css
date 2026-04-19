@@ -91,7 +91,7 @@
 /* HUD BOX */
 .hud-box {
   margin-top: 30px;
-  height: 120px;
+  height: fit-content;
   border: 1px solid rgba(0,140,255,0.3);
   background: rgba(0,140,255,0.05);
   position: relative;
@@ -138,4 +138,98 @@
 /* GLOW */
 .glow {
   text-shadow: 0 0 15px rgba(0,140,255,0.5);
+}
+
+/* CTA BUTTON */
+.cta-btn {
+  padding: 12px 28px;
+  border: 1px solid rgba(0,140,255,0.6);
+  color: #7db7ff;
+  background: rgba(0,140,255,0.05);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* glow hover */
+.cta-btn:hover {
+  color: white;
+  box-shadow: 0 0 20px rgba(0,140,255,0.6);
+  border-color: #2aa6ff;
+}
+
+/* scan effect inside button */
+.cta-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(0,140,255,0.3), transparent);
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+
+.cta-btn:hover::after {
+  transform: translateX(100%);
+}
+
+/* IMMAGINI */ 
+
+/* CARD BASE */
+.img-card {
+  position: relative;
+  height: 14rem;
+  overflow: hidden;
+  border: 1px solid rgba(0,140,255,0.3);
+  background: rgba(0,140,255,0.05);
+
+  opacity: 0;
+  transform: scale(1.1);
+  filter: blur(8px);
+  transition: all 1s ease;
+}
+
+/* IMG */
+.img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* SCAN EFFECT */
+.scan {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0,140,255,0.2),
+    transparent
+  );
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+/* ACTIVE STATE (JS TRIGGER) */
+.img-card.active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
+
+/* SCAN ANIMATION */
+.img-card.active .scan {
+  animation: scanMove 2s infinite;
+}
+
+@keyframes scanMove {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+[data-i18n] {
+  white-space: pre-line;
 }
