@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Polantis | Tech Universe</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[#050814] text-white overflow-x-hidden">
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="scanline"></div>
+  <p class="glitch">INITIALIZING POLANTIS SYSTEM...</p>
+</div>
+
+<!-- NAV -->
+<header id="nav" class="fixed top-0 w-full z-50 backdrop-blur-md bg-[#050814cc] border-b border-blue-900/30 transition-all">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+
+    <h1 class="text-xl tracking-[0.3em] font-bold text-blue-300 glow">
+      POLANTIS
+    </h1>
+
+    <div class="flex items-center gap-4">
+      <button onclick="setLang('en')" class="nav-btn">EN</button>
+      <button onclick="setLang('pl')" class="nav-btn">PL</button>
+    </div>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="h-screen flex items-center justify-center text-center relative overflow-hidden">
+  <div class="bg-grid"></div>
+  <div class="scan-overlay"></div>
+
+  <div class="z-10">
+    <h2 class="text-5xl md:text-7xl font-bold glitch glow mb-6">
+      <span data-i18n="hero_title">Tech Beyond Limits</span>
+    </h2>
+
+    <p class="text-blue-200 max-w-xl mx-auto opacity-80">
+      <span data-i18n="hero_subtitle"></span>
+    </p>
+  </div>
+</section>
+
+<!-- SECTIONS -->
+<section class="section reveal">
+  <h2 class="section-title" data-i18n="sec1_title"></h2>
+  <p class="section-text" data-i18n="sec1_text"></p>
+  <div class="hud-box"></div>
+</section>
+
+<section class="section reveal">
+  <h2 class="section-title" data-i18n="sec2_title"></h2>
+  <p class="section-text" data-i18n="sec2_text"></p>
+  <div class="hud-box"></div>
+</section>
+
+<section class="section reveal">
+  <h2 class="section-title" data-i18n="sec3_title"></h2>
+  <p class="section-text" data-i18n="sec3_text"></p>
+  <div class="hud-box"></div>
+</section>
+
+<footer class="text-center py-10 border-t border-blue-900/30 text-blue-300 text-sm">
+  POLANTIS © 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
